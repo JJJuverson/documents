@@ -1,0 +1,16 @@
+{
+  "name": "documents",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/JJJuverson/documents.git",
+  "author": "<1269374413@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.3.1"
+  },
+  "scripts": {
+      "docs:dev": "vuepress dev docs",
+      "docs:build": "vuepress build docs",
+	  "deploy": "bash deploy.sh"
+    }
+}
