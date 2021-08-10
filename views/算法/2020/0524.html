@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Simhash算法 | 程序 汪</title>
+    <meta name="description" content="吾日三省吾身：看脸，看称，看余额">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d72f248b.css" as="style"><link rel="preload" href="/assets/js/app.497b9ad1.js" as="script"><link rel="preload" href="/assets/js/3.ea459754.js" as="script"><link rel="preload" href="/assets/js/1.f887630e.js" as="script"><link rel="preload" href="/assets/js/20.fbfbccf8.js" as="script"><link rel="prefetch" href="/assets/js/10.4e6de415.js"><link rel="prefetch" href="/assets/js/11.324dc5f4.js"><link rel="prefetch" href="/assets/js/12.de0e95a4.js"><link rel="prefetch" href="/assets/js/13.18a1adfd.js"><link rel="prefetch" href="/assets/js/14.3fcaabd1.js"><link rel="prefetch" href="/assets/js/15.9947ee84.js"><link rel="prefetch" href="/assets/js/16.c849305a.js"><link rel="prefetch" href="/assets/js/17.0ed0fffc.js"><link rel="prefetch" href="/assets/js/18.257bd750.js"><link rel="prefetch" href="/assets/js/19.127004ed.js"><link rel="prefetch" href="/assets/js/21.1842a78d.js"><link rel="prefetch" href="/assets/js/22.0c5d0fe8.js"><link rel="prefetch" href="/assets/js/23.848a56f3.js"><link rel="prefetch" href="/assets/js/24.2400a92a.js"><link rel="prefetch" href="/assets/js/25.176f1f82.js"><link rel="prefetch" href="/assets/js/26.c15648f6.js"><link rel="prefetch" href="/assets/js/27.13d8bf29.js"><link rel="prefetch" href="/assets/js/28.115c4cc1.js"><link rel="prefetch" href="/assets/js/29.0a481bf1.js"><link rel="prefetch" href="/assets/js/30.45deaf0a.js"><link rel="prefetch" href="/assets/js/31.55b3525f.js"><link rel="prefetch" href="/assets/js/32.fe8ada5e.js"><link rel="prefetch" href="/assets/js/33.f311d590.js"><link rel="prefetch" href="/assets/js/34.10066708.js"><link rel="prefetch" href="/assets/js/35.212866af.js"><link rel="prefetch" href="/assets/js/36.0b5d12b4.js"><link rel="prefetch" href="/assets/js/37.af86d2b2.js"><link rel="prefetch" href="/assets/js/38.a8cf67c0.js"><link rel="prefetch" href="/assets/js/39.baec3bcb.js"><link rel="prefetch" href="/assets/js/4.a3b87832.js"><link rel="prefetch" href="/assets/js/40.13855b63.js"><link rel="prefetch" href="/assets/js/41.b6b90977.js"><link rel="prefetch" href="/assets/js/42.4673b011.js"><link rel="prefetch" href="/assets/js/43.c285100d.js"><link rel="prefetch" href="/assets/js/44.be4955b9.js"><link rel="prefetch" href="/assets/js/45.5c1c7782.js"><link rel="prefetch" href="/assets/js/46.17fcf559.js"><link rel="prefetch" href="/assets/js/47.993367da.js"><link rel="prefetch" href="/assets/js/48.833cc6b9.js"><link rel="prefetch" href="/assets/js/49.701cdd16.js"><link rel="prefetch" href="/assets/js/5.07f13197.js"><link rel="prefetch" href="/assets/js/50.954848d2.js"><link rel="prefetch" href="/assets/js/51.9abc165c.js"><link rel="prefetch" href="/assets/js/52.88435b24.js"><link rel="prefetch" href="/assets/js/53.1d54bea3.js"><link rel="prefetch" href="/assets/js/54.3307895b.js"><link rel="prefetch" href="/assets/js/55.b3139bb3.js"><link rel="prefetch" href="/assets/js/56.7ae41fc6.js"><link rel="prefetch" href="/assets/js/57.55fe599f.js"><link rel="prefetch" href="/assets/js/58.f6804bd0.js"><link rel="prefetch" href="/assets/js/59.c8eb12f0.js"><link rel="prefetch" href="/assets/js/6.2d350a66.js"><link rel="prefetch" href="/assets/js/60.227b8259.js"><link rel="prefetch" href="/assets/js/61.2f2e4c2b.js"><link rel="prefetch" href="/assets/js/62.f7bb3fff.js"><link rel="prefetch" href="/assets/js/63.7846e22d.js"><link rel="prefetch" href="/assets/js/64.1bbc51f8.js"><link rel="prefetch" href="/assets/js/65.f09e9bd6.js"><link rel="prefetch" href="/assets/js/66.add3a6f5.js"><link rel="prefetch" href="/assets/js/67.fc72e28f.js"><link rel="prefetch" href="/assets/js/68.67fa7387.js"><link rel="prefetch" href="/assets/js/7.4beb5e7a.js"><link rel="prefetch" href="/assets/js/8.5b5283bd.js"><link rel="prefetch" href="/assets/js/9.b63896bc.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d72f248b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-4698c43e><div data-v-4698c43e><div id="loader-wrapper" class="loading-wrapper" data-v-4b73742e data-v-4698c43e data-v-4698c43e><div class="loader-main" data-v-4b73742e><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6cbeab0a data-v-4698c43e data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>程序 汪</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>juverson</span>
+            
+          <span data-v-6cbeab0a>2017 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-4698c43e><header class="navbar" data-v-4698c43e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="程序 汪" class="logo"> <span class="site-name">程序 汪</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/JJJuverson" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-4698c43e></div> <aside class="sidebar" data-v-4698c43e><div class="personal-info-wrapper" data-v-6c8ffc9c><img src="/avatar.jpg" alt="author-avatar" class="personal-img" data-v-6c8ffc9c> <h3 class="name" data-v-6c8ffc9c>
+    juverson
+  </h3> <div class="num" data-v-6c8ffc9c><div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>56</h3> <h6 data-v-6c8ffc9c>文章</h6></div> <div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>13</h3> <h6 data-v-6c8ffc9c>标签</h6></div></div> <hr data-v-6c8ffc9c></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/JJJuverson" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Simhash算法</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0524.html#什么是simhash算法" class="sidebar-link">什么是Simhash算法</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0524.html#simhash与传统hash函数的区别" class="sidebar-link">simhash与传统hash函数的区别</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0524.html#simhash的计算原理" class="sidebar-link">Simhash的计算原理</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0524.html#simhash签名距离计算" class="sidebar-link">simhash签名距离计算</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0524.html#算法评估" class="sidebar-link">算法评估</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6cbeab0a data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>Simhash算法</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>juverson</span>
+            
+          <span data-v-6cbeab0a>2017 - </span>
+          2021
+        </a></span></div></div> <div data-v-4698c43e><main class="page"><!----> <div class="page-title" style="display:none;"><h1>Simhash算法</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>juverson</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2020-05-24</span></i> <i class="iconfont reco-eye" data-v-484a899e><span id="/views/%E7%AE%97%E6%B3%95/2020/0524.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-484a899e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      算法
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="什么是simhash算法"><a href="#什么是simhash算法" class="header-anchor">#</a> 什么是Simhash算法</h2> <ul><li>SimHash算法是Google在2007年发表的论文《Detecting Near-Duplicates for Web Crawling》中提到的<br>
+一种指纹生成算法，被应用在Google搜索引擎网页去重的工作之中。简单的说，SimHash算法主要的工作就是将文
+本进行降维，生成一个SimHash值，也就是论文中所提及的“指纹”，通过对不同文本的SimHash值进而比较海明距
+离，从而判断两个文本的相似度。对于文本去重这个问题，常见的解决办法有余弦算法、欧式距离、Jaccard相似
+度、最长公共子串等方法。但是这些方法并不能对海量数据高效的处理。</li> <li>比如说，在搜索引擎中，会有很多相似的关键词，用户所需要获取的内容是相似的，但是搜索的关键词却是不同
+的，如“北京好吃的火锅“和”哪家北京的火锅好吃“，是两个可以等价的关键词，然而通过普通的hash计算，会产
+生两个相差甚远的hash串。而通过SimHash计算得到的Hash串会非常的相近，从而可以判断两个文本的相似程度。</li></ul> <h2 id="simhash与传统hash函数的区别"><a href="#simhash与传统hash函数的区别" class="header-anchor">#</a> simhash与传统hash函数的区别</h2> <ul><li>传统的Hash算法只负责将原始内容尽量均匀随机地映射为一个签名值，原理上仅相当于伪随机数产生算法。传统的hash算法产生的
+两个签名，如果原始内容在一定概率下是相等的；如果不相等，除了说明原始内容不相等外，不再提供任何信息，因为即使原始内容只相
+差一个字节，所产生的签名也很可能差别很大。所以传统的Hash是无法在签名的维度上来衡量原内容的相似度，而SimHash本身属于一种
+局部敏感哈希算法，它产生的hash签名在一定程度上可以表征原内容的相似度。</li> <li>我们主要解决的是文本相似度计算，要比较的是两个文章是否相识，当然我们降维生成了hash签名也是用于这个目的。看到这里估计
+大家就明白了，我们使用的simhash就算把文章中的字符串变成 01 串也还是可以用于计算相似度的，而传统的hash却不行。我们可以来做
+个测试，两个相差只有一个字符的文本串，“你妈妈喊你回家吃饭哦” 和 “你妈妈叫你回家吃饭啦”。
+　　通过simhash计算结果为：<br>
+　　1000010010101101111111100000101011010001001111100001001011001011<br>
+　　1000010010101101011111100000101011010001001111100001101010001011<br>
+　　通过传统hash计算为：<br>
+　　0001000001100110100111011011110<br>
+　　1010010001111111110010110011101</li> <li>大家可以看得出来，相似的文本只有部分 01 串变化了，而普通的hash却不能做到，这个就是局部敏感哈希。</li></ul> <h2 id="simhash的计算原理"><a href="#simhash的计算原理" class="header-anchor">#</a> Simhash的计算原理</h2> <ul><li>Simhash算法主要有五个过程：分词、Hash、加权、合并、降维</li> <li>分词
+<ul><li>给定一段语句，进行分词，得到有效的特征向量，然后为每一个特征向量设置1-5等5个级别的权重
+（如果是给定一个文本，那么特征向量可以是文本中的词，其权重可以是这个词出现的次数）。
+例如给定一段语句：“美国“51区”雇员称内部有9架飞碟，曾看见灰色外星人”，分词后为：“ 美国（4）
+51区（5） 雇员（3） 称（1） 内部（2） 有（1） 9架（3） 飞碟（5） 曾（1） 看见（3） 灰色（4） 外星人（5）”，
+其中括号里的数字代表这个单词在整条语句中的重要程度，数字越大代表越重要。</li></ul></li> <li>Hash
+<ul><li>通过hash函数计算各个特征向量的hash值，hash值为二进制数01组成的n-bit签名。比如“美国”的hash值Hash(美国)为100101，
+“51区”的hash值Hash(51区)为“101011”。就这样，字符串就变成了一系列数字。</li></ul></li> <li>加权
+<ul><li>在hash值的基础上，给所有特征向量进行加权，即W = Hash * weight，且遇到1则hash值和权值正相乘，
+遇到0则hash值和权值负相乘。例如给“美国”的hash值“100101”加权得到：W(美国) = 100101 4 = 4 -4 -4 4 -4 4，
+给“51区”的hash值“101011”加权得到：W(51区)=101011 5 = 5 -5 5 -5 5 5，其余特征向量类似此般操作。</li></ul></li> <li>合并
+<ul><li>将上述各个特征向量的加权结果累加，变成只有一个序列串。拿前两个特征向量举例，例如“美国”的“4 -4 -4 4 -4 4”
+和“51区”的“5 -5 5 -5 5 5”进行累加，得到“4+5 -4+-5 -4+5 4+-5 -4+5 4+5”，得到“9 -9 1 -1 1”。</li></ul></li> <li>降维
+<ul><li>对于n-bit签名的累加结果，如果大于0则置1，否则置0，从而得到该语句的simhash值，最后我们便可以根据不同语句
+simhash的海明距离来判断它们的相似度。例如把上面计算出来的“9 -9 1 -1 1 9”降维（某位大于0记为1，小于0记为0），
+得到的01串为：“1 0 1 0 1 1”，从而形成它们的simhash签名。</li></ul></li> <li>整个流程图为<br> <img src="/assets/img/hash8.c482fd47.png" alt="avatar"></li></ul> <h2 id="simhash签名距离计算"><a href="#simhash签名距离计算" class="header-anchor">#</a> simhash签名距离计算</h2> <ul><li>我们把库里的文本都转换为simhash签名，并转换为long类型存储，空间大大减少。现在我们虽然解决了空间，但是如何计算
+两个simhash的相似度呢？难道是比较两个simhash的01有多少个不同吗？对的，其实也就是这样，我们通过海明距离（Hamming distance）
+就可以计算出两个simhash到底相似不相似。两个simhash对应二进制（01串）取值不同的数量称为这两个simhash的海明距离。
+举例如下： 10101 和 00110 从第一位开始依次有第一位、第四、第五位不同，则海明距离为3。对于二进制字符串的a和b，
+海明距离为等于在a XOR b运算结果中1的个数（普遍算法）。</li></ul> <h2 id="算法评估"><a href="#算法评估" class="header-anchor">#</a> 算法评估</h2> <ul><li>实验对比Minhash、Simhash的性能，结果如下：</li> <li>运行速度：Simhash &gt; Minhash</li> <li>准确率：Minhash &gt; Simhash</li> <li>召回率：Simhash &gt; Minhash</li> <li>工程应用上，海量文本用Simhash，短文本用Minhash</li></ul> <h1 id="python使用simhash实现文本相似性对比"><a href="#python使用simhash实现文本相似性对比" class="header-anchor">#</a> <a href="https://blog.csdn.net/weixin_43750200/article/details/84789361" target="_blank" rel="noopener noreferrer">python使用simhash实现文本相似性对比<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h1> <h1 id="simhash的py实现"><a href="#simhash的py实现" class="header-anchor">#</a> <a href="https://blog.csdn.net/gzt940726/article/details/80460419" target="_blank" rel="noopener noreferrer">simhash的py实现<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h1></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----> <div class="comments-wrapper" data-v-4698c43e><div class="valine-wrapper"><div id="valine"></div></div></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a81d141e data-v-a81d141e><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a81d141e><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a81d141e></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a81d141e></path></svg></div></div></div>
+    <script src="/assets/js/app.497b9ad1.js" defer></script><script src="/assets/js/3.ea459754.js" defer></script><script src="/assets/js/1.f887630e.js" defer></script><script src="/assets/js/20.fbfbccf8.js" defer></script>
+  </body>
+</html>

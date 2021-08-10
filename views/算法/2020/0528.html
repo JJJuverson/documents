@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MD5算法 | 程序 汪</title>
+    <meta name="description" content="吾日三省吾身：看脸，看称，看余额">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d72f248b.css" as="style"><link rel="preload" href="/assets/js/app.497b9ad1.js" as="script"><link rel="preload" href="/assets/js/3.ea459754.js" as="script"><link rel="preload" href="/assets/js/1.f887630e.js" as="script"><link rel="preload" href="/assets/js/16.c849305a.js" as="script"><link rel="prefetch" href="/assets/js/10.4e6de415.js"><link rel="prefetch" href="/assets/js/11.324dc5f4.js"><link rel="prefetch" href="/assets/js/12.de0e95a4.js"><link rel="prefetch" href="/assets/js/13.18a1adfd.js"><link rel="prefetch" href="/assets/js/14.3fcaabd1.js"><link rel="prefetch" href="/assets/js/15.9947ee84.js"><link rel="prefetch" href="/assets/js/17.0ed0fffc.js"><link rel="prefetch" href="/assets/js/18.257bd750.js"><link rel="prefetch" href="/assets/js/19.127004ed.js"><link rel="prefetch" href="/assets/js/20.fbfbccf8.js"><link rel="prefetch" href="/assets/js/21.1842a78d.js"><link rel="prefetch" href="/assets/js/22.0c5d0fe8.js"><link rel="prefetch" href="/assets/js/23.848a56f3.js"><link rel="prefetch" href="/assets/js/24.2400a92a.js"><link rel="prefetch" href="/assets/js/25.176f1f82.js"><link rel="prefetch" href="/assets/js/26.c15648f6.js"><link rel="prefetch" href="/assets/js/27.13d8bf29.js"><link rel="prefetch" href="/assets/js/28.115c4cc1.js"><link rel="prefetch" href="/assets/js/29.0a481bf1.js"><link rel="prefetch" href="/assets/js/30.45deaf0a.js"><link rel="prefetch" href="/assets/js/31.55b3525f.js"><link rel="prefetch" href="/assets/js/32.fe8ada5e.js"><link rel="prefetch" href="/assets/js/33.f311d590.js"><link rel="prefetch" href="/assets/js/34.10066708.js"><link rel="prefetch" href="/assets/js/35.212866af.js"><link rel="prefetch" href="/assets/js/36.0b5d12b4.js"><link rel="prefetch" href="/assets/js/37.af86d2b2.js"><link rel="prefetch" href="/assets/js/38.a8cf67c0.js"><link rel="prefetch" href="/assets/js/39.baec3bcb.js"><link rel="prefetch" href="/assets/js/4.a3b87832.js"><link rel="prefetch" href="/assets/js/40.13855b63.js"><link rel="prefetch" href="/assets/js/41.b6b90977.js"><link rel="prefetch" href="/assets/js/42.4673b011.js"><link rel="prefetch" href="/assets/js/43.c285100d.js"><link rel="prefetch" href="/assets/js/44.be4955b9.js"><link rel="prefetch" href="/assets/js/45.5c1c7782.js"><link rel="prefetch" href="/assets/js/46.17fcf559.js"><link rel="prefetch" href="/assets/js/47.993367da.js"><link rel="prefetch" href="/assets/js/48.833cc6b9.js"><link rel="prefetch" href="/assets/js/49.701cdd16.js"><link rel="prefetch" href="/assets/js/5.07f13197.js"><link rel="prefetch" href="/assets/js/50.954848d2.js"><link rel="prefetch" href="/assets/js/51.9abc165c.js"><link rel="prefetch" href="/assets/js/52.88435b24.js"><link rel="prefetch" href="/assets/js/53.1d54bea3.js"><link rel="prefetch" href="/assets/js/54.3307895b.js"><link rel="prefetch" href="/assets/js/55.b3139bb3.js"><link rel="prefetch" href="/assets/js/56.7ae41fc6.js"><link rel="prefetch" href="/assets/js/57.55fe599f.js"><link rel="prefetch" href="/assets/js/58.f6804bd0.js"><link rel="prefetch" href="/assets/js/59.c8eb12f0.js"><link rel="prefetch" href="/assets/js/6.2d350a66.js"><link rel="prefetch" href="/assets/js/60.227b8259.js"><link rel="prefetch" href="/assets/js/61.2f2e4c2b.js"><link rel="prefetch" href="/assets/js/62.f7bb3fff.js"><link rel="prefetch" href="/assets/js/63.7846e22d.js"><link rel="prefetch" href="/assets/js/64.1bbc51f8.js"><link rel="prefetch" href="/assets/js/65.f09e9bd6.js"><link rel="prefetch" href="/assets/js/66.add3a6f5.js"><link rel="prefetch" href="/assets/js/67.fc72e28f.js"><link rel="prefetch" href="/assets/js/68.67fa7387.js"><link rel="prefetch" href="/assets/js/7.4beb5e7a.js"><link rel="prefetch" href="/assets/js/8.5b5283bd.js"><link rel="prefetch" href="/assets/js/9.b63896bc.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d72f248b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-4698c43e><div data-v-4698c43e><div id="loader-wrapper" class="loading-wrapper" data-v-4b73742e data-v-4698c43e data-v-4698c43e><div class="loader-main" data-v-4b73742e><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6cbeab0a data-v-4698c43e data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>程序 汪</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>juverson</span>
+            
+          <span data-v-6cbeab0a>2017 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-4698c43e><header class="navbar" data-v-4698c43e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="程序 汪" class="logo"> <span class="site-name">程序 汪</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/JJJuverson" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-4698c43e></div> <aside class="sidebar" data-v-4698c43e><div class="personal-info-wrapper" data-v-6c8ffc9c><img src="/avatar.jpg" alt="author-avatar" class="personal-img" data-v-6c8ffc9c> <h3 class="name" data-v-6c8ffc9c>
+    juverson
+  </h3> <div class="num" data-v-6c8ffc9c><div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>56</h3> <h6 data-v-6c8ffc9c>文章</h6></div> <div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>13</h3> <h6 data-v-6c8ffc9c>标签</h6></div></div> <hr data-v-6c8ffc9c></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/JJJuverson" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MD5算法</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0528.html#了解常用hash算法" class="sidebar-link">了解常用Hash算法</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0528.html#md5算法原理详解" class="sidebar-link">MD5算法原理详解</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6cbeab0a data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>MD5算法</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>juverson</span>
+            
+          <span data-v-6cbeab0a>2017 - </span>
+          2021
+        </a></span></div></div> <div data-v-4698c43e><main class="page"><!----> <div class="page-title" style="display:none;"><h1>MD5算法</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>juverson</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2020-05-28</span></i> <i class="iconfont reco-eye" data-v-484a899e><span id="/views/%E7%AE%97%E6%B3%95/2020/0528.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-484a899e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      算法
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="了解常用hash算法"><a href="#了解常用hash算法" class="header-anchor">#</a> 了解常用Hash算法</h2> <ul><li>了解了hash基本定义，就不能不提到一些著名的hash算法，MD5 和 SHA-1 可以说是目前应用最广泛的Hash算法，而
+它们都是以 MD4 为基础设计的。</li> <li>MD4
+MD4(RFC 1320)是 MIT 的 Ronald L. Rivest在1990年设计的，MD是 Message Digest的缩写。它适用在32位
+字长的处理器上用高速软件实现--它是基于 32 位操作数的位操作来实现的。</li> <li>MD5
+MD5(RFC 1321)是 Rivest 于1991年对MD4的改进版本。它对输入仍以512位分组，其输出是4个32位字的级联，与MD4
+相同。MD5比MD4来得复杂，并且速度较之要慢一点，但更安全，在抗分析和抗差分方面表现更好</li> <li>SHA-1 及其他
+SHA1是由NIST NSA设计为同DSA一起使用的，它对长度小于264的输入，产生长度为160bit的散列值，因此抗穷举(brute-force)性
+更好。SHA-1 设计时基于和MD4相同原理,并且模仿了该算法。</li></ul> <h2 id="md5算法原理详解"><a href="#md5算法原理详解" class="header-anchor">#</a> <a href="https://blog.csdn.net/hla199106/article/details/45129963" target="_blank" rel="noopener noreferrer">MD5算法原理详解<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h2> <ul><li>MD5是一个安全的散列算法，输入两个不同的明文不会得到相同的输出，根据输出值，不能得到原始的密文，其过程不可逆。
+MD5以512位分组来处理输入信息，且每一组又被划分为16个32位子分组，经过了一系列的处理后，算法的输出由四个32位分组组成，
+将这四个32位分组级联后将生成一个128位的散列值。
+<img src="/assets/img/hash2.61cafbc7.png" alt="avatar"></li> <li>MD5的一般步骤如下：</li> <li>1.数据填充，将输入的数据填充到数据长度是512位的倍数。具体填充规则如下：<br>
+在MD5算法中，首先需要对输入信息进行填充，使其位长对512求余的结果等于448，并且填充必须进行。
+因此，信息的位长（Bits Length）将被扩展至N*512+448，N为一个非负整数，N可以是零。填充的方法如下：</li></ul> <ol><li>在信息的后面填充一个1和无数个0，直到满足上面的条件时才停止用0对信息的填充。</li> <li>在这个结果后面附加一个以64位二进制表示的填充前信息长度（单位为Bit），如果二进制表示的填充前信息长度超过64位，则取低64位。
+经过这两步的处理，信息的位长=N*512+448+64=(N+1）*512，即长度恰好是512的整数倍。这样做的原因是为满足后面处理中对信息长度的要求。</li></ol> <ul><li>2.使用128比特长的缓冲区储存中间结果和最终杂凑值，缓冲区为4个32比特以小端(little-endian)模式方式储存数据的寄存器(A,B,C,D)
+初始值分别为A=0x01234567,B=0x89ABCDEF,C=0xFEDCBA98,D=0x76543210<br>
+(每一个变量给出的数值是高字节存于内存低地址，低字节存于内存高地址，即大端模式，反之为小端模式)</li> <li>3.分组处理</li> <li>分组处理框图：<br> <img src="/assets/img/hash3.b2a582ea.png" alt="avatar"></li> <li>每一组的算法流程图如下：<br>
+（1）第一分组需要将上面四个链接变量复制到另外四个变量中：A到a，B到b，C到c，D到d。<br>
+（2）从第二分组开始的变量为上一分组的运算结果，即A = a， B = b， C = c， D = d。
+一个MD5运算由类似的64次循环构成，分成4组16次，主循环有四轮（MD4只有三轮），每轮循环都很相似。第一轮进行16次操作。
+每次操作对a、b、c和d中的其中三个作一次非线性函数运算，然后将所得结果加上第四个变量，文本的一个子分组和一个常数。
+再将所得结果向左环移一个不定的数，并加上a、b、c或d中之一。最后用该结果取代a、b、c或d中之一。
+算法的核心是包含四个循环的压缩函数<br>
+F( X ,Y ,Z ) = ( X &amp; Y ) | ( (~X) &amp; Z )<br>
+G( X ,Y ,Z ) = ( X &amp; Z ) | ( Y &amp; (~Z) )<br>
+H( X ,Y ,Z ) =X ^ Y ^ Z<br>
+I( X ,Y ,Z ) =Y ^ ( X | (~Z) )<br>
+（&amp;是与（And），|是或（Or），~是非（Not），^是异或（Xor））</li> <li>假设Mj表示消息的第j个子分组（从0到15），常数ti是4294967296*abs( sin(i) ）的整数部分，i 取值从1到64，单位是弧度。
+（4294967296=2^(32)）</li> <li>先定义<br>
+FF(a ,b ,c ,d ,Mj ,s ,ti) 操作为 a=b+((a+F(b,c,d)+Mj+ti)&lt;&lt; s)<br>
+GG(a ,b ,c ,d ,Mj ,s ,ti) 操作为 a=b+((a+G(b,c,d)+Mj+ti)&lt;&lt; s)<br>
+HH(a ,b ,c ,d ,Mj ,s ,ti) 操作为 a=b+((a+H(b,c,d)+Mj+ti)&lt;&lt; s)<br>
+II(a ,b ,c ,d ,Mj ,s ,ti) 操作为 a=b+((a+I(b,c,d)+Mj+ti)&lt;&lt; s)<br>
+注意：“&lt;&lt;”表示循环左移位，不是左移位。<br>
+这四轮（共64步）是：<br>
+第一轮<br>
+FF(a ,b ,c ,d ,M0 ,7 ,0xd76aa478 )<br>
+FF(d ,a ,b ,c ,M1 ,12 ,0xe8c7b756 )<br>
+FF(c ,d ,a ,b ,M2 ,17 ,0x242070db )<br>
+FF(b ,c ,d ,a ,M3 ,22 ,0xc1bdceee )<br>
+FF(a ,b ,c ,d ,M4 ,7 ,0xf57c0faf )<br>
+FF(d ,a ,b ,c ,M5 ,12 ,0x4787c62a )<br>
+FF(c ,d ,a ,b ,M6 ,17 ,0xa8304613 )<br>
+FF(b ,c ,d ,a ,M7 ,22 ,0xfd469501)<br>
+FF(a ,b ,c ,d ,M8 ,7 ,0x698098d8 )<br>
+FF(d ,a ,b ,c ,M9 ,12 ,0x8b44f7af )<br>
+FF(c ,d ,a ,b ,M10 ,17 ,0xffff5bb1 )<br>
+FF(b ,c ,d ,a ,M11 ,22 ,0x895cd7be )<br>
+FF(a ,b ,c ,d ,M12 ,7 ,0x6b901122 )<br>
+FF(d ,a ,b ,c ,M13 ,12 ,0xfd987193 )<br>
+FF(c ,d ,a ,b ,M14 ,17 ,0xa679438e )<br>
+FF(b ,c ,d ,a ,M15 ,22 ,0x49b40821 )<br>
+第二轮<br>
+GG(a ,b ,c ,d ,M1 ,5 ,0xf61e2562 )<br>
+GG(d ,a ,b ,c ,M6 ,9 ,0xc040b340 )<br>
+GG(c ,d ,a ,b ,M11 ,14 ,0x265e5a51 )<br>
+GG(b ,c ,d ,a ,M0 ,20 ,0xe9b6c7aa )<br>
+GG(a ,b ,c ,d ,M5 ,5 ,0xd62f105d )<br>
+GG(d ,a ,b ,c ,M10 ,9 ,0x02441453 )<br>
+GG(c ,d ,a ,b ,M15 ,14 ,0xd8a1e681 )<br>
+GG(b ,c ,d ,a ,M4 ,20 ,0xe7d3fbc8 )<br>
+GG(a ,b ,c ,d ,M9 ,5 ,0x21e1cde6 )<br>
+GG(d ,a ,b ,c ,M14 ,9 ,0xc33707d6 )<br>
+GG(c ,d ,a ,b ,M3 ,14 ,0xf4d50d87 )<br>
+GG(b ,c ,d ,a ,M8 ,20 ,0x455a14ed )<br>
+GG(a ,b ,c ,d ,M13 ,5 ,0xa9e3e905 )<br>
+GG(d ,a ,b ,c ,M2 ,9 ,0xfcefa3f8 )<br>
+GG(c ,d ,a ,b ,M7 ,14 ,0x676f02d9 )<br>
+GG(b ,c ,d ,a ,M12 ,20 ,0x8d2a4c8a )<br>
+第三轮<br>
+HH(a ,b ,c ,d ,M5 ,4 ,0xfffa3942 )<br>
+HH(d ,a ,b ,c ,M8 ,11 ,0x8771f681 )<br>
+HH(c ,d ,a ,b ,M11 ,16 ,0x6d9d6122 )<br>
+HH(b ,c ,d ,a ,M14 ,23 ,0xfde5380c )<br>
+HH(a ,b ,c ,d ,M1 ,4 ,0xa4beea44 )<br>
+HH(d ,a ,b ,c ,M4 ,11 ,0x4bdecfa9 )<br>
+HH(c ,d ,a ,b ,M7 ,16 ,0xf6bb4b60 )<br>
+HH(b ,c ,d ,a ,M10 ,23 ,0xbebfbc70 )<br>
+HH(a ,b ,c ,d ,M13 ,4 ,0x289b7ec6 )<br>
+HH(d ,a ,b ,c ,M0 ,11 ,0xeaa127fa )<br>
+HH(c ,d ,a ,b ,M3 ,16 ,0xd4ef3085 )<br>
+HH(b ,c ,d ,a ,M6 ,23 ,0x04881d05 )<br>
+HH(a ,b ,c ,d ,M9 ,4 ,0xd9d4d039 )<br>
+HH(d ,a ,b ,c ,M12 ,11 ,0xe6db99e5 )<br>
+HH(c ,d ,a ,b ,M15 ,16 ,0x1fa27cf8 )<br>
+HH(b ,c ,d ,a ,M2 ,23 ,0xc4ac5665 )<br>
+第四轮<br>
+II(a ,b ,c ,d ,M0 ,6 ,0xf4292244 )<br>
+II(d ,a ,b ,c ,M7 ,10 ,0x432aff97 )<br>
+II(c ,d ,a ,b ,M14 ,15 ,0xab9423a7 )<br>
+II(b ,c ,d ,a ,M5 ,21 ,0xfc93a039 )<br>
+II(a ,b ,c ,d ,M12 ,6 ,0x655b59c3 )<br>
+II(d ,a ,b ,c ,M3 ,10 ,0x8f0ccc92 )<br>
+II(c ,d ,a ,b ,M10 ,15 ,0xffeff47d )<br>
+II(b ,c ,d ,a ,M1 ,21 ,0x85845dd1 )<br>
+II(a ,b ,c ,d ,M8 ,6 ,0x6fa87e4f )<br>
+II(d ,a ,b ,c ,M15 ,10 ,0xfe2ce6e0 )<br>
+II(c ,d ,a ,b ,M6 ,15 ,0xa3014314 )<br>
+II(b ,c ,d ,a ,M13 ,21 ,0x4e0811a1 )<br>
+II(a ,b ,c ,d ,M4 ,6 ,0xf7537e82 )<br>
+II(d ,a ,b ,c ,M11 ,10 ,0xbd3af235 )<br>
+II(c ,d ,a ,b ,M2 ,15 ,0x2ad7d2bb )<br>
+II(b ,c ,d ,a ,M9 ,21 ,0xeb86d391 )</li></ul> <p>所有这些完成之后，将a、b、c、d分别在原来基础上再加上A、B、C、D。<br>
+即a = a + A，b = b + B，c = c + C，d = d + D<br>
+然后用下一分组数据继续运行以上算法。</p> <ul><li><ol start="4"><li>输出<br>
+最后的输出是L个分组都被处理完之后，最后一个分组的输出即为128比特的消息摘要。</li></ol></li></ul></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----> <div class="comments-wrapper" data-v-4698c43e><div class="valine-wrapper"><div id="valine"></div></div></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a81d141e data-v-a81d141e><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a81d141e><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a81d141e></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a81d141e></path></svg></div></div></div>
+    <script src="/assets/js/app.497b9ad1.js" defer></script><script src="/assets/js/3.ea459754.js" defer></script><script src="/assets/js/1.f887630e.js" defer></script><script src="/assets/js/16.c849305a.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基于scrapy-redis分布式爬虫和elasticsearch的食品安全搜索引擎的研究与实现 | 程序 汪</title>
+    <meta name="description" content="吾日三省吾身：看脸，看称，看余额">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d72f248b.css" as="style"><link rel="preload" href="/assets/js/app.497b9ad1.js" as="script"><link rel="preload" href="/assets/js/3.ea459754.js" as="script"><link rel="preload" href="/assets/js/1.f887630e.js" as="script"><link rel="preload" href="/assets/js/11.324dc5f4.js" as="script"><link rel="prefetch" href="/assets/js/10.4e6de415.js"><link rel="prefetch" href="/assets/js/12.de0e95a4.js"><link rel="prefetch" href="/assets/js/13.18a1adfd.js"><link rel="prefetch" href="/assets/js/14.3fcaabd1.js"><link rel="prefetch" href="/assets/js/15.9947ee84.js"><link rel="prefetch" href="/assets/js/16.c849305a.js"><link rel="prefetch" href="/assets/js/17.0ed0fffc.js"><link rel="prefetch" href="/assets/js/18.257bd750.js"><link rel="prefetch" href="/assets/js/19.127004ed.js"><link rel="prefetch" href="/assets/js/20.fbfbccf8.js"><link rel="prefetch" href="/assets/js/21.1842a78d.js"><link rel="prefetch" href="/assets/js/22.0c5d0fe8.js"><link rel="prefetch" href="/assets/js/23.848a56f3.js"><link rel="prefetch" href="/assets/js/24.2400a92a.js"><link rel="prefetch" href="/assets/js/25.176f1f82.js"><link rel="prefetch" href="/assets/js/26.c15648f6.js"><link rel="prefetch" href="/assets/js/27.13d8bf29.js"><link rel="prefetch" href="/assets/js/28.115c4cc1.js"><link rel="prefetch" href="/assets/js/29.0a481bf1.js"><link rel="prefetch" href="/assets/js/30.45deaf0a.js"><link rel="prefetch" href="/assets/js/31.55b3525f.js"><link rel="prefetch" href="/assets/js/32.fe8ada5e.js"><link rel="prefetch" href="/assets/js/33.f311d590.js"><link rel="prefetch" href="/assets/js/34.10066708.js"><link rel="prefetch" href="/assets/js/35.212866af.js"><link rel="prefetch" href="/assets/js/36.0b5d12b4.js"><link rel="prefetch" href="/assets/js/37.af86d2b2.js"><link rel="prefetch" href="/assets/js/38.a8cf67c0.js"><link rel="prefetch" href="/assets/js/39.baec3bcb.js"><link rel="prefetch" href="/assets/js/4.a3b87832.js"><link rel="prefetch" href="/assets/js/40.13855b63.js"><link rel="prefetch" href="/assets/js/41.b6b90977.js"><link rel="prefetch" href="/assets/js/42.4673b011.js"><link rel="prefetch" href="/assets/js/43.c285100d.js"><link rel="prefetch" href="/assets/js/44.be4955b9.js"><link rel="prefetch" href="/assets/js/45.5c1c7782.js"><link rel="prefetch" href="/assets/js/46.17fcf559.js"><link rel="prefetch" href="/assets/js/47.993367da.js"><link rel="prefetch" href="/assets/js/48.833cc6b9.js"><link rel="prefetch" href="/assets/js/49.701cdd16.js"><link rel="prefetch" href="/assets/js/5.07f13197.js"><link rel="prefetch" href="/assets/js/50.954848d2.js"><link rel="prefetch" href="/assets/js/51.9abc165c.js"><link rel="prefetch" href="/assets/js/52.88435b24.js"><link rel="prefetch" href="/assets/js/53.1d54bea3.js"><link rel="prefetch" href="/assets/js/54.3307895b.js"><link rel="prefetch" href="/assets/js/55.b3139bb3.js"><link rel="prefetch" href="/assets/js/56.7ae41fc6.js"><link rel="prefetch" href="/assets/js/57.55fe599f.js"><link rel="prefetch" href="/assets/js/58.f6804bd0.js"><link rel="prefetch" href="/assets/js/59.c8eb12f0.js"><link rel="prefetch" href="/assets/js/6.2d350a66.js"><link rel="prefetch" href="/assets/js/60.227b8259.js"><link rel="prefetch" href="/assets/js/61.2f2e4c2b.js"><link rel="prefetch" href="/assets/js/62.f7bb3fff.js"><link rel="prefetch" href="/assets/js/63.7846e22d.js"><link rel="prefetch" href="/assets/js/64.1bbc51f8.js"><link rel="prefetch" href="/assets/js/65.f09e9bd6.js"><link rel="prefetch" href="/assets/js/66.add3a6f5.js"><link rel="prefetch" href="/assets/js/67.fc72e28f.js"><link rel="prefetch" href="/assets/js/68.67fa7387.js"><link rel="prefetch" href="/assets/js/7.4beb5e7a.js"><link rel="prefetch" href="/assets/js/8.5b5283bd.js"><link rel="prefetch" href="/assets/js/9.b63896bc.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d72f248b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-4698c43e><div data-v-4698c43e><div id="loader-wrapper" class="loading-wrapper" data-v-4b73742e data-v-4698c43e data-v-4698c43e><div class="loader-main" data-v-4b73742e><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6cbeab0a data-v-4698c43e data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>程序 汪</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>juverson</span>
+            
+          <span data-v-6cbeab0a>2017 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-4698c43e><header class="navbar" data-v-4698c43e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="程序 汪" class="logo"> <span class="site-name">程序 汪</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/JJJuverson" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-4698c43e></div> <aside class="sidebar" data-v-4698c43e><div class="personal-info-wrapper" data-v-6c8ffc9c><img src="/avatar.jpg" alt="author-avatar" class="personal-img" data-v-6c8ffc9c> <h3 class="name" data-v-6c8ffc9c>
+    juverson
+  </h3> <div class="num" data-v-6c8ffc9c><div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>56</h3> <h6 data-v-6c8ffc9c>文章</h6></div> <div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>13</h3> <h6 data-v-6c8ffc9c>标签</h6></div></div> <hr data-v-6c8ffc9c></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/JJJuverson" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>基于scrapy-redis分布式爬虫和elasticsearch的食品安全搜索引擎的研究与实现</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0618.html#摘要" class="sidebar-link">摘要</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0618.html#引言" class="sidebar-link">引言</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0618.html#_1-搜索引擎中的关键技术研究" class="sidebar-link">1.搜索引擎中的关键技术研究</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/%E7%AE%97%E6%B3%95/2020/0618.html#_1-1-系统总体架构" class="sidebar-link">1.1 系统总体架构</a></li><li class="sidebar-sub-header"><a href="/views/%E7%AE%97%E6%B3%95/2020/0618.html#_1-2-爬虫系统" class="sidebar-link">1.2 爬虫系统</a></li><li class="sidebar-sub-header"><a href="/views/%E7%AE%97%E6%B3%95/2020/0618.html#_1-3-搜索模块" class="sidebar-link">1.3.搜索模块</a></li></ul></li><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0618.html#_2-食品安全搜索引擎的设计与实现" class="sidebar-link">2 食品安全搜索引擎的设计与实现</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/%E7%AE%97%E6%B3%95/2020/0618.html#_2-1-scrapy-redis分布式爬虫的设计与实现" class="sidebar-link">2.1 Scrapy-Redis分布式爬虫的设计与实现</a></li><li class="sidebar-sub-header"><a href="/views/%E7%AE%97%E6%B3%95/2020/0618.html#_2-2-基于elasticsearch的搜索引擎的设计与实现" class="sidebar-link">2.2 基于Elasticsearch的搜索引擎的设计与实现</a></li></ul></li><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0618.html#_3-api模块和数据可视化模块" class="sidebar-link">3 API模块和数据可视化模块</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E7%AE%97%E6%B3%95/2020/0618.html#_4-系统测试" class="sidebar-link">4 系统测试</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6cbeab0a data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>基于scrapy-redis分布式爬虫和elasticsearch的食品安全搜索引擎的研究与实现</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>juverson</span>
+            
+          <span data-v-6cbeab0a>2017 - </span>
+          2021
+        </a></span></div></div> <div data-v-4698c43e><main class="page"><!----> <div class="page-title" style="display:none;"><h1>基于scrapy-redis分布式爬虫和elasticsearch的食品安全搜索引擎的研究与实现</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>juverson</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2020-06-18</span></i> <i class="iconfont reco-eye" data-v-484a899e><span id="/views/%E7%AE%97%E6%B3%95/2020/0618.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-484a899e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      算法
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="摘要"><a href="#摘要" class="header-anchor">#</a> 摘要</h2> <ul><li>针对通用搜索引擎收录关于食品安全资源库较为不全、重复等问题，难以满足人们越来越重视食品的需求，
+构建一套比较完整的食品安全资源库就显得尤为重要。针对现在比较流行的网络爬虫框架进行分析和选择，在现有框架的
+基础上构建一套适合的网络爬虫系统，选用Scrapy-redis对网站进行分布式爬取，提高爬取速度，选用Simhash算法对爬取的
+资源进行相似度判别，过滤掉相似度高的资源，以此提高资源库的质量。通过Elasticsearch的搜索机制基础上设计了食品安全搜索
+引擎的系统架构，最后通过django+vue构建前后端分离项目实现搜索引擎的页面展示和交互。最后通过实验验证，
+相比于传统的通用搜索引擎，该文设计的食品安全搜索引擎的搜索结果相关性更好，数量更多。可以很好的满足人们对食品安全资讯的
+获取。</li> <li>关键词：食品安全搜索引擎 Scrapy-redis 分布式爬虫 Elasticsearch Simhash</li></ul> <h2 id="引言"><a href="#引言" class="header-anchor">#</a> 引言</h2> <ul><li>近年来，随着经济的发展，人民生活水平质量的不断上升，人们越来越关注食品安全问题。食品安全是消费者购买食品的首要考虑因素。
+从经济学角度考虑食品市场的信息不对称是导致食品安全问题产生的根本原因。所以，有关食品安全信息的搜索和获取已成为人们亟待解决
+的重要问题。</li> <li>为了解决现阶段这一问题，该文对网络搜索引擎的核心思想，以及关键技术等做出了分析，结合URL去重策略，文本去重策略等
+多门技术，提出了一个基于Scrapy-redis和Elasticserch全问搜索引擎的食品安全搜索引擎的设计方案，并使用vue+Django框架实现页面前后端
+的搭建。</li></ul> <h2 id="_1-搜索引擎中的关键技术研究"><a href="#_1-搜索引擎中的关键技术研究" class="header-anchor">#</a> 1.搜索引擎中的关键技术研究</h2> <h3 id="_1-1-系统总体架构"><a href="#_1-1-系统总体架构" class="header-anchor">#</a> 1.1 系统总体架构</h3> <ul><li>本系统主要分为四个模块。分别是：爬虫系统，搜索模块，API模块，数据可视化模块，如下图所示：
+<div align="center"><img src="/assets/img/lunwen003.41f74a00.png" alt="avatar"></div> <div align="center" font-size="12px">图1 系统总体架构</div></li> <li>系统通过爬取特定的URL，下载其标识的资源页面，从互联网中获取所爬取的信息。并在爬虫中进行文本的清洗，判重，去重等操作，
+最后将文本存入Mysql数据库中，API则根据可视化要求，通过对Mysql数据库的增删改查操作，实现对应API功能，供前端
+可视化界面调用，从而实现相关功能。</li></ul> <h3 id="_1-2-爬虫系统"><a href="#_1-2-爬虫系统" class="header-anchor">#</a> 1.2 爬虫系统</h3> <h4 id="_1-2-1-网络爬虫技术"><a href="#_1-2-1-网络爬虫技术" class="header-anchor">#</a> 1.2.1 网络爬虫技术</h4> <ul><li>网络爬虫，是一种能够根据程序设计者所涉及的规则，自动爬取特定网页信息。网络爬虫是搜索引擎的重要组成成分，其主要作用
+是不断下载网页内容镜像到本地，网络爬虫的工作流程如下：</li> <li>1.解析初始URL域名，得到网页主机地址</li> <li>2.访问网页，下载网页内容镜像到本地资源库，下载完成之后将当前URL存入到已抓取的队列中</li> <li>3.对新的url地址进行分类，已访问的地址直接丢弃，未访问的url存入待下载队列</li></ul> <h4 id="_1-2-2-scrapy爬虫框架"><a href="#_1-2-2-scrapy爬虫框架" class="header-anchor">#</a> 1.2.2 Scrapy爬虫框架</h4> <ul><li>Scrapy框架是基于twisted框架的非阻塞异步I/O处理的python事件网络框架，Scrapy主要包含引擎(Scrapy Engine)、调度器(Scheduler)、
+下载器(Downloader)、爬虫(Spiders)、项目管道(Pipeline)、下载器中间件(Downloader Middlewares)、爬虫中间件(Spider Middlewares)、
+调度中间件(Scheduler Middlewares)。
+<div align="center"><img src="/assets/img/lunwen004.7847a33e.png" alt="avatar"></div> <div align="center" font-size="12px">图2 Scrapy架构</div></li> <li>简单的叙述Scrapy的运行流程为：Engine是整个框架的“大脑”，控制爬虫的运行。Spider通过自定义设置控制Engine向调度器发送指令，调度器
+得到指令后处理后发送请求给下载器，下载器根据接受的请求从互联网下载相关镜像到本地，在传递给spiders，spiders对数据进行处理，之后将数据
+传入项目管道保存或输出，获取的URL发送到Engine进行验证处理，已爬取的URL会被丢掉，未爬取的URL排序后传递到调度器待下载队列，准备下一步
+抓取。只要调度器不为空，爬虫将一直运行下去。</li></ul> <h3 id="_1-3-搜索模块"><a href="#_1-3-搜索模块" class="header-anchor">#</a> 1.3.搜索模块</h3> <h4 id="_1-3-1-elasticsearch全文搜索引擎"><a href="#_1-3-1-elasticsearch全文搜索引擎" class="header-anchor">#</a> 1.3.1 Elasticsearch全文搜索引擎</h4> <ul><li>Elasticsearch是基于Lucene的开源搜索服务器，它提供了一个分布式多语言多用户的全文搜索引擎。</li> <li>如果我们建立一个网站或应用程序，并要添加搜索功能，但是想要完成搜索工作的创建是非常困难的。我们希望搜索解决方案要运行速度快，我们
+希望能有一个零配置和一个完全免费的搜索模式，我们希望能够简单地使用JSON通过HTTP来索引数据，我们希望我们的搜索服务器始终可用，我们
+希望能够从一台开始并扩展到数百台，我们希望实时搜索，我们希望简单的多租户，我们希望建立一个云的解决方案。因此我们利用Elasticsearch来解决
+所有这些问题及可能出现的更多其它问题。</li> <li>Elasticsearch既有数据储存，又有数据分析，是当前流行的企业级搜索引擎，目前联想，微软，Facebook等使用的是elasticsearch作为搜索引擎。</li></ul> <h4 id="_1-3-2-elasticsearch搜索原理"><a href="#_1-3-2-elasticsearch搜索原理" class="header-anchor">#</a> 1.3.2 Elasticsearch搜索原理</h4> <ul><li>要想了解Elasticsearch的搜索原理，必须先了解几个概念：</li> <li><ol><li>索引，类型，文档。在Elasticsearch中，索引是存放数据的地方，类型是用来定义数据结构的，而文档就是最终数据了，简单的理解就是
+索引相当于mysql的一个数据库，类型相当于mysql中的表，而文档相当于一条记录，也就是一行。</li></ol></li> <li><ol start="2"><li>倒排索引(反向索引)，顾名思义，既然有倒排索引就也有正向索引，所谓正向索引一般通过key，去找value。倒排索引就是从词的关键字，去找文本。
+而在搜索引擎中，每个文件对应一个文件ID，文件内容被表示为一系列关键词的集合。通过倒排索引，可以根据词快速获取包含这个词的文档列表。</li></ol></li> <li>搜索原理简单解析：假设我们有一篇文章，文章中有标题，作者，内容等字段，那么首先，我们可以建立一个名为Articles的索引，然后创建一个名为Article
+的类型，然后通过Mapping来定义每个字段的类型，比如标题，作者定义为Keyword类型(此类型适用于索引结构化字段，只能通过精确值搜索得到)，内容定义为Text类型
+(此字段内容会被分析生成倒排索引，适用于全文搜索)，然后就是把数据转换成JSON格式存放在文档里。在搜索时，根据用户输入的句子，会先经过分词器分词，然后建立
+倒排索引找到相对应文档。</li></ul> <h2 id="_2-食品安全搜索引擎的设计与实现"><a href="#_2-食品安全搜索引擎的设计与实现" class="header-anchor">#</a> 2 食品安全搜索引擎的设计与实现</h2> <h3 id="_2-1-scrapy-redis分布式爬虫的设计与实现"><a href="#_2-1-scrapy-redis分布式爬虫的设计与实现" class="header-anchor">#</a> 2.1 Scrapy-Redis分布式爬虫的设计与实现</h3> <ul><li>Scrapy-redis是使用Scrapy框架与Redis数据库实现网络分布式爬取的一个开源项目，其分布式体现在对各Spider同时爬取打乱的requests、stats数据，存入
+统一的Redis队列，然后通过dupefilters对URL访问去重，再分配给各爬虫进行爬取。本次爬虫模块主要基于Scrapy-redis的分布式网络爬虫的基础上进行
+扩展和实现，包括scrapy-redis爬虫模块，URL去重模块和文本相似度过滤模块。</li></ul> <h4 id="_2-1-1-scrapy-redis分布式爬虫模块"><a href="#_2-1-1-scrapy-redis分布式爬虫模块" class="header-anchor">#</a> 2.1.1 Scrapy-redis分布式爬虫模块</h4> <ul><li>为了测试分布式爬虫功能，爬取的目标选择了食品伙伴网(http://www.foodmate.net/)，网络爬虫从初始地址获得第一批网页链接，此次测试
+使用的是CrawlSpider类实现全站爬取，根据CrawlSpider中定义的目标网页的rules判断链接是否为需要爬取的链接，然后加入待下载队列，进行
+url去重和排序后交给爬虫爬取，否则就为无用链接丢掉。
+<div align="center"><img src="/assets/img/lunwen005.dcf7c3ae.png" alt="avatar"></div> <div align="center" font-size="12px">图3 网页链接处理流程</div></li> <li>爬虫相关字段的提取：使用Xpath正则表达式区匹配需要抓取的字段数据，例如</li> <li>文章的标题title = response.xpath(&quot;//h1[@id='title']/text()&quot;).get()</li> <li>文章内容content = response.xpath(&quot;//div[@id='content']//text()&quot;).getall()</li> <li>等等这里就只做个示范</li></ul> <h4 id="_2-1-2-url去重模块"><a href="#_2-1-2-url去重模块" class="header-anchor">#</a> 2.1.2 URL去重模块</h4> <ul><li>在进行数据爬取时，若不进行URL去重，不仅会降低爬虫的效率，还会造成储存资源的浪费，Scrapy框架默认的URL去重方法由dupefilters去重器的RFPDupeFilter
+类实现，RFPDupeFilter类会对每一个请求生成信息指纹fp，但是这种URL去重方法比较耗费内存，采用布隆过滤器就可以很好的改进这个问题，但布隆过滤器有时会误判，
+将不重复的URL过滤掉。相比于互联网资源，食品安全的信息条目较少，所以采用默认的URL去重方法。</li></ul> <h4 id="_2-1-3-文本相似度过滤模块"><a href="#_2-1-3-文本相似度过滤模块" class="header-anchor">#</a> 2.1.3 文本相似度过滤模块</h4> <ul><li>文本去重模块是基于SimHash算法，通过调用jieba分词的分词方法，对字段content进行分词，运用TF-IDF算法从中提取带有权重的关键词列表，然后将得到的列表
+交给simhash方法中。在simhash方法中，实现了SimHash算法里的流程，进而得到该文本64位二进制SimHash值，通过比较两个文本SimHash值的海明距离，进而判断两个文本的
+相似度，一般海明距离小于等于3，则为相似。在此项目中，为了不影响爬虫的爬取速度，将去重模块运用在将爬取到的数据存入redis数据库之后，
+经过判重模块清洗数据之后，将清洗过的存入mysql数据库中。
+<div align="center"><img src="/assets/img/hash8.c482fd47.png" alt="avatar"></div> <div align="center" font-size="12px">图4 SimHash算法流程图</div></li></ul> <h3 id="_2-2-基于elasticsearch的搜索引擎的设计与实现"><a href="#_2-2-基于elasticsearch的搜索引擎的设计与实现" class="header-anchor">#</a> 2.2 基于Elasticsearch的搜索引擎的设计与实现</h3> <ul><li>在网页的爬虫系统中，已经从页面中获得返回的item对象，此时需要用Elasticsearch-dsl在pipeline中将爬取到的数据保存到Elasticsearch
+中。此时Elasticsearch主要有两大任务：索引文档和搜索文档，索引文档是将爬虫爬取到的数据进行分词，然后构建倒排索引，搜索文档，是根据
+用户输入关键字匹配倒排索引中的文档。</li> <li>在本次项目中用到的是Elasticsearch-RTF，它是针对中文的一个发行版，并且它用到了很多测试好了的插件，例如ik插件提供的ik_max_word中文分词器
+可以对文本进行最细致的分词。</li> <li>此次项目中还需要完成搜索建议，通过Elasticsearch搜索建议接口Completion Suggester实现自动补全建议，在使用接口时需要用到搜索建议词，
+故通过analyzer接口可以生成对应建议词。</li> <li>当用户在搜索界面输入需要查询的关键词，进行搜索时，搜索结果页面会显示搜索内容，搜索热词。处理用户搜索的核心思想是：当点击搜索时会在vue前端
+框架search组件中调用handleSelect方法，通过GET方法将用户输入的搜索内容通过参数传回，并赋值给key_words,并向后台发起用户搜索请求，后台处理用户
+搜索的URL，将返回JSON数据接口，供前端调用。用户处理关键搜索流程如下所示：
+<div align="center"><img src="/assets/img/lunwen006.24e8c25d.png" alt="avatar"></div> <div align="center" font-size="12px">图5 搜索流程图</div></li></ul> <h2 id="_3-api模块和数据可视化模块"><a href="#_3-api模块和数据可视化模块" class="header-anchor">#</a> 3 API模块和数据可视化模块</h2> <ul><li>API模块和数据可视化模块分别使用Django框架和Vue框架进行开发的。Django框架为数据可视化模块提供API接口，它的主要功能就是接收从客户端发来的
+http请求，并从中提取安全有效的参数，在数据库完成数据的增删改查，并将有效的数据返回给客户端。Vue框架开发前端可视化模块主要是完成数据的渲染和给
+后端发送http请。</li> <li>Django是一个由python写成web应用框架，主要采用MVC的架构模式。在Django框架中，还包含许多强大的第三方插件，具有较强的可扩展性。且使用方便，易于创建
+易维护。</li> <li>Vue是一套用于构建用户界面的渐进式框架，是一种采用MVVM的架构模式，自底向上增量开发的设计。使用vue作为可视化模块开发的重要原因是，此次选用Vue的目的是
+可以在此基础上将系统扩展，实现更多功能，且易于维护。</li></ul> <h2 id="_4-系统测试"><a href="#_4-系统测试" class="header-anchor">#</a> 4 系统测试</h2> <ul><li>关于爬取速度方面，经测试，在单机条件下运行，爬虫持续运行无报错，稳定持续爬取数据，30分钟入库数据1341条，平均38条/min。</li></ul></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----> <div class="comments-wrapper" data-v-4698c43e><div class="valine-wrapper"><div id="valine"></div></div></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a81d141e data-v-a81d141e><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a81d141e><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a81d141e></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a81d141e></path></svg></div></div></div>
+    <script src="/assets/js/app.497b9ad1.js" defer></script><script src="/assets/js/3.ea459754.js" defer></script><script src="/assets/js/1.f887630e.js" defer></script><script src="/assets/js/11.324dc5f4.js" defer></script>
+  </body>
+</html>
